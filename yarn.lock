@@ -571,6 +571,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@troisjs/components@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@troisjs/components/-/components-0.0.4.tgz#095b35ccaff3b5e26069ba5ffb33cd39f312c892"
+  integrity sha512-wADBo7OivEmvHP0HQYlYHzs+/BRYgw0mIhfA1E3JPnqCLj/GOWfRuF6KQjM7YQsQ4Pq/9Uj/UKe53mYh0kO8kw==
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"

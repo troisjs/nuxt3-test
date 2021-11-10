@@ -9,6 +9,7 @@
     "nuxt3": "latest"
   },
   "dependencies": {
+    "@troisjs/components": "^0.0.4",
     "three": "^0.134.0",
     "troisjs": "^0.3.3"
   }

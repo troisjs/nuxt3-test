@@ -1,26 +1,14 @@
 <template>
-  <Renderer ref="rendererC" antialias resize="window">
-    <Camera :position="{ z: 10 }" />
-    <Scene>
-      <PointLight :position="{ y: 50, z: 50 }" />
-      <Box ref="boxC" :rotation="{ y: Math.PI / 4, z: Math.PI / 4 }">
-        <LambertMaterial />
-      </Box>
-    </Scene>
-  </Renderer>
+  <Slider :images="images" />
 </template>
 
 <script setup>
-import { Box, Camera, LambertMaterial, PointLight, Renderer, Scene } from 'troisjs'
+import Slider from '@troisjs/components/src/sliders/explode/Slider.vue'
 
-const rendererC = ref(null)
-const boxC = ref(null)
-
-onMounted(() => {
-  const renderer = rendererC.value
-  const mesh = boxC.value.mesh
-  renderer.onBeforeRender(() => {
-    mesh.rotation.x += 0.01;
-  })
-})
+const images = [
+  { src: 'https://troisjs.github.io/assets/images/img1.jpg' },
+  { src: 'https://troisjs.github.io/assets/images/img2.jpg' },
+  { src: 'https://troisjs.github.io/assets/images/img3.jpg' },
+  { src: 'https://troisjs.github.io/assets/images/img4.jpg' }
+]
 </script>
