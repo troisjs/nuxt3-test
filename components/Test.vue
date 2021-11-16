@@ -2,7 +2,7 @@
   <Slider :images="images" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Slider from '@troisjs/components/src/sliders/explode/Slider.vue'
 
 const images = [
