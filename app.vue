@@ -1,12 +1,20 @@
 <template>
   <ClientOnly>
-    <Test />
+    <Test v-if="isMounted" />
   </ClientOnly>
 </template>
 
 <script setup>
-import { defineAsyncComponent } from 'vue'
-const Test = defineAsyncComponent(() => import('./components/troisjs/Test.vue'))
+import { defineAsyncComponent, defineComponent, h, onMounted } from 'vue'
+
+let render = []
+const Test = defineComponent({ render() { return render } })
+
+const isMounted = ref(false)
+onMounted(() => {
+  render = h(defineAsyncComponent(() => import('./components/troisjs/Test.vue')))
+  isMounted.value = true
+})
 </script>
 
 <style>
