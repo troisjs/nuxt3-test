@@ -1,12 +1,16 @@
 <template>
-  <ClientOnly>
-    <LazyTest v-if="isMounted" />
-  </ClientOnly>
+  <Test v-if="isMounted" />
 </template>
 
 <script setup>
+import { defineAsyncComponent, defineComponent, h, onMounted } from 'vue'
+
+let render = []
+const Test = defineComponent({ render() { return render } })
+
 const isMounted = ref(false)
 onMounted(() => {
+  render = h(defineAsyncComponent(() => import('./client/Test.vue')))
   isMounted.value = true
 })
 </script>
