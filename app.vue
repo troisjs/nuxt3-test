@@ -1,10 +1,14 @@
 <template>
   <ClientOnly>
-    <LazyTest />
+    <LazyTest v-if="isMounted" />
   </ClientOnly>
 </template>
 
 <script setup>
+const isMounted = ref(false)
+onMounted(() => {
+  isMounted.value = true
+})
 </script>
 
 <style>
