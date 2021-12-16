@@ -5,6 +5,8 @@
 </template>
 
 <script setup>
+import { defineAsyncComponent } from 'vue'
+const Test = defineAsyncComponent(() => import('./components/troisjs/Test.vue'))
 </script>
 
 <style>
